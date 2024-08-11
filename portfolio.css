@@ -274,18 +274,30 @@ body{
     padding: 75px 90px;
     margin-left: 50px;
 }
-.container2{
-    padding:75px 0 90px;
-
+.container2 {
+    width: 600px;
+    height: 500px;
+    padding: 75px 100px;
+    margin-left: 50px;
 }
-.heading1{
+
+.heading1 {
     text-align: center;
     text-decoration: underline;
     text-underline-offset: 10px;
-    text-decoration-thickness:5px ;
+    text-decoration-thickness: 5px;
     margin-bottom: 30px;
-
 }
+
+.heading2 {
+    margin-left: 110px;
+     /* Centered text alignment */
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 30px;
+}
+
 .bar{
     font-size: 15px;
 
@@ -337,7 +349,11 @@ body{
     transform-origin: left;
 }
 .progress-line.html span{
-    width: 70%;
+    width: 90%;
+    
+}
+.progress-line.java span{
+    width: 80%;
     
 }
 .progress-line.css span{
@@ -345,11 +361,11 @@ body{
     
 }
 .progress-line.javaScript span{
-    width: 50%;
+    width: 70%;
     
 }
 .progress-line.php span{
-    width: 60%;
+    width: 90%;
     
 }
 .progress-line.mysql span{
@@ -357,7 +373,7 @@ body{
     
 }
 .progress-line.python span{
-    width: 70%;
+    width: 50%;
     
 }
 .progress-line span::after{
@@ -378,16 +394,19 @@ body{
 .progress-line.css span::after{
     content:"80%";
 }
+.progress-line.java span::after{
+    content:"80%";
+}
 .progress-line.javaScript span::after{
-    content:"50%";
-}.progress-line.html span::after{
     content:"70%";
+}.progress-line.html span::after{
+    content:"90%";
 }.progress-line.php span::after{
-    content:"60%";
+    content:"90%";
 }.progress-line.mysql span::after{
     content:"80%";
 }.progress-line.python span::after{
-    content:"70%";
+    content:"50%";
 }
 .progress-line span::before{
     content:"";
@@ -602,49 +621,55 @@ transition: height 0.5s;
     text-align: center;
 
 }
-.contact-text h2 span{
+.contact-text h2 span {
     color: #0ef;
-
 }
-.contact-text h4{
+
+.contact-text h4 {
     margin: 15px 0;
-    color: rgb(228,228,228);
+    color: rgb(228, 228, 228);
     font-size: 20px;
     font-weight: 600;
 }
-.contact-text p{
-    color: rgb(177,177,177);
+
+.contact-text p {
+    color: rgb(177, 177, 177);
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 2rem;
-
 }
-.contact-list{
+
+.contact-list {
     margin-bottom: 3rem;
+    list-style: none; /* Ensure there's no default list styling */
+    padding: 0; /* Remove default padding */
+}
 
-}
-.contact-list li{
+.contact-list li {
     margin-bottom: 10px;
-    display: block;
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center align items */
 }
-.contact-list li{
-    margin-bottom: 10px;
-    display: block;
 
-}
-.contact-list i{
-    display: inline-block;
+.contact-list i {
     color: aqua;
     font-size: 20px;
     font-weight: 600;
-    transition: all .40s ease;
+    margin-right: 10px; /* Space between icon and text */
+    transition: color 0.4s ease, transform 0.4s ease; /* Smooth transition for hover effect */
 }
-.contact-list li a:hover{
 
-    transform: scale(1.01) translateY(-5px);
-    color: #0ef;
+.contact-list a {
+    color: inherit; /* Use the color from the parent element */
+    text-decoration: none; /* Remove underline */
 }
-.contact-icons i{
+
+.contact-list a:hover {
+    color: #0ef; /* Change text color on hover */
+    transform: scale(1.01) translateY(-5px); /* Slightly enlarge and move up on hover */
+}
+
+.contact-icons i {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -657,18 +682,18 @@ transition: height 0.5s;
     color: #0ef;
     text-decoration: none;
     margin: 30px 15px 0;
-    transition: .5s ease;
+    transition: background 0.5s ease, color 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for hover effects */
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: calc(.2s * var(--i));
-
 }
-.contact-icons i:hover{
+
+.contact-icons i:hover {
     background: #0ef;
-    color: #000000;
-    box-shadow:0 0 20px #0ef;
-
+    color: #000;
+    box-shadow: 0 0 20px #0ef; /* Add glowing effect on hover */
 }
+
 .contact-form form{
     position: relative;
 
